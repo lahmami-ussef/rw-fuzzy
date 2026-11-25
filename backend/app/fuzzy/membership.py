@@ -1,4 +1,4 @@
-"""Fonction d'appartenance triangulaire."""
+
 import numpy as np
 
 
