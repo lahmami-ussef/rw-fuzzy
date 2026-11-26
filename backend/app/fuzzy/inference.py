@@ -2,6 +2,7 @@
 import numpy as np
 
 from .membership import triangular
+from .defuzzification import centroide
 from .variables import ENTREES, SORTIE, fuzzifier
 from .rules import REGLES
 
@@ -63,3 +64,9 @@ def inferer(stats):
         "activations": activations,
         "agregat": agreger(activations),
     }
+
+def evaluer(stats):
+    """Pipeline complet : statistiques -> score sur 100."""
+    res = inferer(stats)
+    res["score"] = centroide(GRILLE, res["agregat"])
+    return res

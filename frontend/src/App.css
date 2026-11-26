@@ -1,0 +1,225 @@
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header p {
+  margin: 4px 0 24px;
+  color: #6b7280;
+}
+
+.grille {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+@media (max-width: 800px) {
+  .grille {
+    grid-template-columns: 1fr;
+  }
+}
+
+.resultats {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.carte {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.carte h2 {
+  margin: 0 0 12px;
+  font-size: 1.1rem;
+}
+
+.carte h3 {
+  margin: 0 0 6px;
+  font-size: 0.95rem;
+}
+
+.carte.vide {
+  color: #6b7280;
+  text-align: center;
+}
+
+.carte.erreur {
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+.note {
+  color: #6b7280;
+  font-size: 0.85rem;
+  margin: 0 0 8px;
+}
+
+/* Formulaire */
+.exemples {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.champ {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+}
+
+.champ small {
+  color: #6b7280;
+}
+
+input {
+  padding: 8px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+input.invalide {
+  border-color: #ef4444;
+}
+
+.erreur-champ {
+  color: #dc2626;
+  font-size: 0.8rem;
+}
+
+button {
+  background: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+  background: #4338ca;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+button.secondaire {
+  background: #e5e7eb;
+  color: #1f2937;
+  padding: 6px 10px;
+  font-size: 0.85rem;
+}
+
+button.secondaire:hover {
+  background: #d1d5db !important;
+}
+
+form button[type="submit"] {
+  width: 100%;
+  margin-top: 4px;
+}
+
+/* Résultat */
+.score-bloc {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.score {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.sur-cent {
+  color: #6b7280;
+}
+
+.badge {
+  margin-left: auto;
+  padding: 6px 14px;
+  border-radius: 999px;
+  color: white;
+  font-weight: 600;
+}
+
+.badge.faible {
+  background: #ef4444;
+}
+
+.badge.moyen {
+  background: #f59e0b;
+}
+
+.badge.excellent {
+  background: #22c55e;
+}
+
+.deux-colonnes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.liste {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.liste.fort li {
+  color: #15803d;
+}
+
+.liste.faible li {
+  color: #b91c1c;
+}
+
+.vide {
+  color: #9ca3af;
+  margin: 0;
+}
+
+/* Tableau des règles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 6px 8px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.barre-fond {
+  height: 6px;
+  background: #e5e7eb;
+  border-radius: 3px;
+  margin-bottom: 2px;
+}
+
+.barre {
+  height: 100%;
+  background: #6366f1;
+  border-radius: 3px;
+}
